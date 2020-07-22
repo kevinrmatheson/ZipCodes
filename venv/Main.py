@@ -4,7 +4,7 @@ import numpy as np
 import uszipcode
 import csv
 from uszipcode import SearchEngine
-
+###
 ogcodes = pd.read_csv(r"C:\Users\Kevin\Downloads\ZipCodeList2020.csv")###I just grabbed the zipcodes from the wrestlers and output as a list, then paste to the same excel file.
 #ogcodes = ogcodes[0:171]
 ### CHange it so that zip codes which dont exist spit out 99999 or something###
