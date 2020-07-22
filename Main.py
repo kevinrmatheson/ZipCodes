@@ -4,8 +4,8 @@ import numpy as np
 import uszipcode
 import csv
 from uszipcode import SearchEngine
-###
-ogcodes = pd.read_csv(r"C:\Users\Kevin\Downloads\ZipCodeList2020.csv")###I just grabbed the zipcodes from the wrestlers and output as a list, then paste to the same excel file.
+
+ogcodes = pd.read_csv(r"C:\Users\Kevin\Downloads\ZipCodeList2020.csv")###I just grabbed the zipcodes from the wrestlers and output as a list, then paste to the same excel file. Change to your path tho
 #ogcodes = ogcodes[0:171]
 ### CHange it so that zip codes which dont exist spit out 99999 or something###
 codes = ogcodes.iloc[:,1]###Make sure to make list of all numbers, no blanks (blanks replaced with 00000)
@@ -36,7 +36,7 @@ for code in codes:
   temp1.append(zipcode.median_household_income)
 temp2 = [(0 if item is None else item) for item in temp1]
 ogcodes['Income'] = temp2
-path = 'C:\\Users\\Kevin\\Downloads'
+path = 'C:\\Users\\Kevin\\Downloads'#### change this path to whereever you want to save the updated sip codes list.
 
-ogcodes.to_csv(path+'\\Updated_Zip_Codes6-22-20.csv',index = False)
+ogcodes.to_csv(path+'\\Updated_Zip_Codes6-22-20.csv',index = False)### change the name here if you want to keep old copies. Otherwise this will write over the old name
 
