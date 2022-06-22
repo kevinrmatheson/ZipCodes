@@ -3,7 +3,7 @@ autopep8==1.4.4
 certifi==2019.9.11
 chardet==3.0.4
 idna==2.8
-numpy==1.17.4
+numpy==1.22.0
 pandas==0.25.3
 pathlib-mate==0.0.15
 pgeocode==0.1.2
